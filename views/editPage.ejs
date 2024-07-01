@@ -19,12 +19,13 @@
       </li>
     </ul>
     <div class="row col-7 mx-auto border shadow-sm">
-      <form action="/submit" method="post" class="col-8 p-3">
+      <form action="/updateUser/<%=index%>" method="post" class="col-8 p-3">
         <div class="mb-3">
           <label for="firstName">First name</label>
           <input
             class="form-control"
             type="text"
+            value="<%= student.firstName%>"
             placeholder="first name"
             name="firstName"
           />
@@ -34,6 +35,7 @@
           <input
             class="form-control"
             type="text"
+            value="<%= student.lastName%>"
             placeholder="last name"
             name="lastName"
           />
@@ -43,13 +45,19 @@
           <input
             class="form-control"
             type="email"
+            value="<%= student.email%>"
             placeholder="email"
             name="email"
           />
         </div>
         <div class="mb-3">
           <label for="gender">Gender</label>
-          <select class="form-select" name="gender" id="">
+          <select
+            class="form-select"
+            name="gender"
+            value="<%= student.gender%>"
+            id=""
+          >
             <option value="undefined">-</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -62,15 +70,16 @@
             min="18"
             class="form-control"
             type="number"
+            value="<%= student.age%>"
             placeholder="Age"
             name="age"
           />
         </div>
 
-        <button class="form-control btn btn-danger">Submit</button>
+        <button class="form-control btn btn-warning">Update User Data</button>
       </form>
       <div class="bg-danger text-white col-4">
-        <h1>Register</h1>
+        <h1>Edit User</h1>
       </div>
     </div>
   </body>
