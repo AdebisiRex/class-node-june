@@ -40,7 +40,7 @@
             <td><%= studentList[i].firstName %></td>
             <td><%= studentList[i].email %></td>
             <td>
-              <form method="get" action="/editPage/<%= i%>">
+              <form method="get" action="/editPage/<%= studentList[i]._id%>">
                 <button class="btn btn-warning text-danger">Edit User</button>
               </form>
               <form method="post" action="/student/<%= i%>">
